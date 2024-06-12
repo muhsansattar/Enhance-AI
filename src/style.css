@@ -1,0 +1,1403 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 0.3rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: rgb(216, 216, 216);
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #3518C9;
+    border-radius: 1rem;
+}
+
+/* Top Navbar */
+
+.header {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 230px 10px 230px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: white;
+    border-bottom: 2px solid rgb(220, 220, 220);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .permanent {
+    display: flex;
+    margin-top: 15px;
+}
+
+.header .permanent .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 80px;
+}
+
+.header .permanent .logo img {
+    height: 59px;
+    width: 52px;
+    margin-right: 20px;
+}
+
+.header .permanent .logo a {
+    background: linear-gradient(90deg, #785EFD 1.65%, #2BAA93 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-size: 35.91px;
+    font-weight: 600;
+    line-height: 42.09px;
+    text-align: left;
+}
+
+.header .permanent .nav {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.header .permanent .nav a {
+    margin: 0px 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 23.67px;
+    color: rgba(100, 105, 119, 1);
+}
+
+.header .permanent .nav .menu-btn {
+    font-size: 20px;
+    margin-left: 20px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    display: none;
+}
+
+.header .permanent .nav a:nth-child(1) {
+    padding: 10px 25px;
+    color: white;
+    background: linear-gradient(90deg, #27C4A7 4.33%, #4BBF49 100%);
+    border-radius: 12px;
+}
+
+.header .permanent .nav .signup {
+    display: flex;
+    background: linear-gradient(90deg, #795FFD 0%, #3518C9 100%);
+    color: white;
+    justify-content: center;
+    padding: 11px 22px;
+    border-radius: 12px;
+    margin-left: 20px;
+}
+
+.header .permanent .nav .signup a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20.2px;
+    font-weight: 500;
+    line-height: 23.67px;
+    text-align: left;
+    color: White;
+}
+
+p {
+    text-align: justify;
+    padding: 20px 10px;
+}
+
+/* Side Bar */
+
+.side-bar {
+    background: white;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -1000px;
+    overflow-y: auto;
+    transition: 0.4s;
+    transition-property: left;
+    z-index: 1000;
+}
+
+.side-bar.active {
+    right: 0px;
+}
+
+.side-bar .menu {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.side-bar .menu .item {
+    position: relative;
+    cursor: pointer;
+}
+
+.side-bar .menu .item a {
+    color: #3e21d0;
+    font-size: 17px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 20px;
+    line-height: 60px;
+    margin-top: -5px;
+    transition: 0.3s ease;
+}
+
+.side-bar .menu .item a:hover {
+    color: white;
+    background-color: #3e21d0;
+}
+
+.side-bar .menu .item i {
+    margin-right: 15px;
+}
+
+.side-bar .menu .item a .dropdown {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.3s ease;
+}
+
+.side-bar .menu .item .sub-menu {
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 1;
+    display: none;
+}
+
+.side-bar .menu .item .sub-menu a {
+    padding-left: 80px;
+}
+
+.rotate {
+    transform: rotate(90deg);
+}
+
+.close-btn {
+    position: absolute;
+    color: #3e21d0;
+    font-size: 20px;
+    cursor: pointer;
+    left: 0;
+    margin: 17px;
+}
+
+/* Section 1 */
+
+.section1 {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.section1 .text {
+    text-align: center;
+    padding-left: 100px;
+}
+
+.section1 .text h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 53px;
+    font-weight: 700;
+    line-height: 87.14px;
+    letter-spacing: -0.025em;
+    text-align: center;
+    background: linear-gradient(90deg, #3ED6BB 14.46%, #785DFC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section1 .text h1 span {
+    font-family: 'Inter', sans-serif;
+    font-size: 53px;
+    font-weight: 400;
+    line-height: 87.14px;
+    letter-spacing: -0.025em;
+    text-align: center;
+}
+
+.section1 .text p {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 29.05px;
+    text-align: center;
+    color: rgba(100, 105, 119, 1);
+    padding: 5px 330px;
+}
+
+.section1 .text .btn {
+    background: linear-gradient(90deg, #2AC4A0 0%, #6C77EF 100%);
+    color: white;
+    border-radius: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 29.95px;
+    padding: 12px 47px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Section2  */
+
+.section2 {
+    padding: 10px 250px 50px 250px;
+    z-index: 100;
+}
+
+.section2__container {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 20px;
+    z-index: 1000;
+}
+
+.section2__left,
+.section2__right {
+    width: 50%;
+    padding: 40px 30px;
+    height: auto;
+    background-color: #FFFFFF;
+}
+
+.section2__left {
+    border-right: 1px solid rgb(239, 239, 239);
+    border-radius: 15px 0px 0px 15px;
+}
+
+.section2__right {
+    border-left: 1px solid rgb(239, 239, 239);
+    border-radius: 0px 15px 15px 0px;
+}
+
+.section2__explain {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.section2__explain img {
+    width: 35px;
+    height: 30px;
+}
+
+.section2__explain h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.section2__left p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin-top: -20px;
+    margin-left: -10px;
+    font-weight: 400;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.section2__left h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.section2__code-section {
+    background: rgba(243, 243, 243, 1);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 0;
+    line-height: 1px;
+    letter-spacing: 0.08em;
+    text-align: left;
+    height: 150px;
+}
+
+.section2 .section2__code-section .first {
+    color: blue;
+}
+
+.section2 .section2__code-section .second {
+    color: red;
+}
+
+.section2 .section2__code-section .third {
+    color: rgb(73, 150, 73);
+}
+
+.section2__code-section p {
+    margin: 6px;
+}
+
+.section2__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #795FFD 0%, #3518C9 100%);
+    color: white;
+    padding: 13px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+.section2__btn a {
+    cursor: pointer;
+}
+
+.section2__right .section2__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(243, 243, 243, 1);
+    padding: 13px 27px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.section2__right .section2__btn a {
+    color: rgba(83, 83, 83, 1);
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 19.92px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.section2__btn img {
+    margin-right: 10px;
+}
+
+.section2__btn a {
+    color: White;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.section2__right h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.05px;
+    align-items: center;
+    display: flex;
+}
+
+.section2__right h1 i {
+    background-color: rgb(89, 89, 89);
+    margin-right: 20px;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section2__right .ptext {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin-left: -10px;
+    font-weight: 400;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: -5px;
+}
+
+.section2 .section2__info-section {
+    margin-top: -10px;
+}
+
+.section2 .section2__info-section div {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 23px;
+    text-align: left;
+    display: flex;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    padding: 12px 5px;
+}
+
+.section2 .section2__info-section div:nth-child(3) {
+    border-bottom: none;
+}
+
+.section2__info-section i {
+    margin-right: 10px;
+    min-height: 25px;
+    min-width: 25px;
+    max-height: 25px;
+    max-width: 25px;
+    background-color: rgb(222, 222, 222);
+    margin-right: 20px;
+    border-radius: 50%;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section2__right .section2__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(243, 243, 243, 1);
+    padding: 13px 27px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.section2__right .section2__btn a {
+    color: rgba(83, 83, 83, 1);
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 19.92px;
+    text-align: left;
+}
+
+.section2 .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 30px 0px;
+}
+
+.section2 .buttons .button {
+    flex: 1 1 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.section2 .buttons .button:nth-child(6) img {
+    height: 20px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.section2 .button .btn {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 15px;
+    background: rgba(169, 152, 255, 1);
+    color: rgba(31, 0, 187, 1);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.section2 .button:nth-child(1) .btn {
+    background-color: white;
+}
+
+.section2 .button img {
+    margin-right: 15px;
+}
+
+.section2 .signupbutton {
+    margin: 50px;
+    justify-content: center;
+    display: flex;
+}
+
+.section2 .signupbutton .button .btn {
+    padding: 15px 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(56, 27, 203, 1);
+    cursor: pointer;
+}
+
+/* Section 3 */
+
+.section4 {
+    position: relative;
+}
+
+.section4 .first {
+    position: absolute;
+    top: -190px;
+}
+
+.section4 .second {
+    position: absolute;
+    top: 300px;
+    right: 0px;
+}
+
+.section4 .third {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 500px;
+    left: 40px;
+}
+
+.blue-banner {
+    background: linear-gradient(90deg, #785EFD 0%, #371BCB 100%);
+    position: relative;
+    padding: 50px 0;
+    text-align: center;
+    z-index: -10;
+    padding-top: 430px;
+    margin-top: -450px;
+}
+
+.blue-banner .content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.blue-banner .title {
+    background: linear-gradient(90deg, #38FFDC 23.68%, #FFE44B 72.34%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 60px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.blue-banner .title span {
+    font-weight: 700;
+}
+
+.blue-banner .description {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    Padding: 20px 470px;
+    text-align: center;
+}
+
+.blue-banner .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin: 60px 170px;
+}
+
+.blue-banner .boxes .shadow {
+    background: linear-gradient(89.45deg, #3C3C3C -0.44%, #464646 100.51%);
+    padding: 0px;
+    border-radius: 20px;
+    transform: rotate(-3deg); 
+    width: 480px;
+}
+
+.blue-banner .box {
+    background: #FFFFFF;
+    border-radius: 20px;
+    width: 45%;
+    min-width: 480px;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    transform: rotate(3deg)
+}
+
+
+.blue-banner .box .img {
+    flex: 0 0 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.blue-banner .box .img img {
+    width: 50px;
+    height: 50px;
+}
+
+.blue-banner .box .text {
+    flex: 1;
+    text-align: left;
+    height: auto;
+    padding: 0px 40px 0px 20px;
+}
+
+.blue-banner .box .text h3 {
+    color: rgba(81, 81, 81, 0.6);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    text-align: left;
+}
+
+.blue-banner .box .text h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 43.57px;
+    text-align: left;
+    margin-top: -5px;
+}
+
+.blue-banner .box .text p {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: left;
+    margin-top: -20px;
+    margin-left: -10px;
+    color: rgba(0, 0, 0, 0.6);
+    padding: 15px 0px 0px 10px;
+}
+
+
+/* Media Query */
+
+@media (max-width:1500px) {
+    .header {
+        padding: 0px 10px 10px 10px;
+    }
+
+    .section1 .text p {
+        padding: 5px 200px;
+    }
+
+    .blue-banner .description {
+        Padding: 20px 370px;
+    }
+}
+
+
+@media (max-width:1400px) {
+    .header {
+        padding: 20px;
+        align-items: center;
+    }
+
+    .header .temp {
+        display: none;
+    }
+
+    .header .permanent {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 0px;
+    }
+
+    .header .permanent .nav {
+        margin-right: 0px;
+    }
+
+    .section2 {
+        padding: 10px 50px 50px 50px;
+    }
+
+    .section4 .first,
+    .section4 .second,
+    .section4 .third {
+        display: none;
+    }
+
+    .blue-banner .description {
+        Padding: 20px 280px;
+    }
+
+    .blue-banner .boxes {
+        gap: 40px;
+        margin: 30px 100px;
+    }
+}
+
+@media (max-width:1200px) {
+    .header .permanent .logo {
+        margin-right: 0px;
+    }
+
+    .header .permanent .logo img {
+        height: 45px;
+        width: 45px;
+        margin-right: 15px;
+    }
+
+    .header .permanent .logo a {
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .header .permanent .nav a {
+        margin: 0px 14px;
+        font-size: 17px;
+        line-height: 23.67px;
+    }
+
+    .header .permanent .nav a:nth-child(1) {
+        padding: 10px 20px;
+    }
+
+    .header .permanent .nav .signup {
+        padding: 10px 20px;
+    }
+
+    .header .permanent .nav .signup a {
+        font-size: 18px;
+    }
+
+    .section1 .text p {
+        padding: 5px 100px;
+    }
+
+    .blue-banner .box .text {
+
+        padding: 0px 20px 0px 20px;
+    }
+
+    .blue-banner .box .img img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .blue-banner .boxes {
+        gap: 40px;
+        margin: 30px 50px;
+    }
+}
+
+
+@media(max-width:1100px) {
+    .section1 .text p {
+        padding: 5px 100px;
+        font-size: 16px;
+    }
+
+    .section1 .text h1 {
+        font-size: 40px;
+    }
+
+    .section1 .text h1 span {
+        font-size: 40px;
+    }
+
+    .blue-banner .description {
+        Padding: 20px 200px;
+    }
+
+    .blue-banner .boxes {
+        gap: 30px;
+        margin: 60px 50px;
+    }
+    
+    .blue-banner .boxes .shadow {
+        width: 400px;
+    }
+    
+    .blue-banner .box {
+        min-width: 400px;
+    }
+    
+}
+
+@media (max-width:1000px) {
+    .header {
+        padding: 20px 20px;
+    }
+
+    .header .permanent .logo img {
+        height: 35px;
+        width: 35px;
+        margin-right: 10px;
+    }
+
+    .header .permanent .logo a {
+        font-size: 22px;
+    }
+
+    .header .permanent .nav a {
+        margin: 0px 12px;
+        font-size: 13px;
+    }
+
+    .header .permanent .nav a:nth-child(1) {
+        padding: 7px 15px;
+    }
+
+    .header .permanent .nav .signup {
+        padding: 7px 15px;
+        align-items: center;
+    }
+
+    .header .permanent .nav .signup a {
+        font-size: 13px;
+    }
+
+    .header .permanent .nav .signup img {
+        height: 15px;
+        width: 15px;
+        align-items: center;
+    }
+
+    .section1 {
+        padding: 20px 20px 50px 20px;
+    }
+
+    .section1 .img {
+        display: none;
+    }
+
+    .section1 .text {
+        padding: 20px;
+    }
+
+    .section2 {
+        padding: 0px 20px 50px 20px;
+    }
+
+    .section2__explain {
+        margin-bottom: 15px;
+    }
+
+    .section2__explain img {
+        width: 25px;
+        height: 20px;
+    }
+
+    .section2__explain h2 {
+        font-size: 23px;
+    }
+
+    .section2__left p {
+        font-size: 12px;
+    }
+
+    .section2__left h3 {
+        font-size: 14px;
+    }
+
+    .section2__code-section {
+        height: 110px;
+    }
+
+    .section2__right h1 {
+        font-size: 23px;
+    }
+
+    .section2__right h1 i {
+        height: 25px;
+        width: 25px;
+        font-size: 16px;
+    }
+
+    .section2__right .ptext {
+        font-size: 13px;
+    }
+
+    .section2 .section2__info-section div {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .section2__info-section i {
+        min-height: 20px;
+        min-width: 20px;
+        max-height: 20px;
+        max-width: 20px;
+        font-size: 10px;
+        margin-right: 10px;
+    }
+
+    .section2 .buttons .button:nth-child(6) img {
+        display: none;
+    }
+
+    .section2 .buttons .button {
+        flex: 1 1 17%;
+    }
+
+    .blue-banner .description {
+        Padding: 20px 150px;
+    }
+
+    .blue-banner .boxes {
+        gap: 40px;
+        margin: 30px 20px;
+    }
+
+    .blue-banner .box .text {
+
+        padding: 0px 10px 0px 10px;
+    }
+
+    .blue-banner .box .img img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .blue-banner .box .text h3 {
+        font-size: 13px;
+    }
+
+    .blue-banner .box .text h1 {
+        font-size: 20px;
+    }
+
+    .blue-banner .box .text p {
+        font-size: 12px;
+        text-align: left;
+    }
+}
+
+@media (max-width:900px)
+{
+    .blue-banner .boxes .shadow {
+        width: 320px;
+    }
+    
+    .blue-banner .box {
+        min-width: 320px;
+    }
+
+    .blue-banner .boxes {
+        gap: 30px;
+        margin: 60px 50px;
+    }
+}
+
+@media (max-width:800px) {
+    .header .permanent .nav .menu-btn {
+        display: block;
+    }
+
+    .header .permanent .nav .temp-nav {
+        display: none;
+    }
+
+    .header {
+        padding: 20px 30px;
+    }
+
+    .section1 {
+        padding: 20px;
+    }
+
+    .section1 .text h1 {
+        font-size: 30px;
+        line-height: 45px;
+    }
+
+    .section1 .text h1 span {
+        font-size: 30px;
+        line-height: 45px;
+    }
+
+    .section1 .text p {
+        font-size: 14px;
+        padding: 10px 100px;
+        line-height: 20px;
+    }
+
+    .section1 .text .btn {
+        font-size: 15px;
+        padding: 6px 23px;
+    }
+
+    .section2 {
+        padding: 0px 50px;
+    }
+
+    .section2__container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .section2__left,
+    .section2__right {
+        border: 1px solid rgb(235, 235, 235);
+        margin: 20px 0px;
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .section2__container {
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .section2 .buttons .button:nth-child(6) img {
+        display: block;
+        width: 120px;
+    }
+
+    .section2 .buttons .button {
+        flex: 1 1 30%;
+    }
+
+    .section2 .signupbutton {
+        margin: 20px;
+    }
+
+    .section2 .signupbutton .button img {
+        height: 22px;
+        width: 22px;
+    }
+
+    .section2 .signupbutton .button .btn {
+        padding: 10px 30px;
+        font-size: 15px;
+    }
+
+    .blue-banner .title {
+        font-size: 40px;
+        margin-top: 30px;
+    }
+
+    .blue-banner .description {
+        font-size: 15px;
+    }
+
+    .blue-banner .boxes {
+        margin: 30px 10px;
+    }
+
+    .blue-banner .box {
+        padding: 8px 10px;
+    }
+}
+
+@media(max-width:700px) {
+    .section1 .text h1 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .section1 .text h1 span {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .section1 .text p {
+        font-size: 12px;
+        padding: 10px 50px;
+        line-height: 17px;
+    }
+
+    .section1 .text .btn {
+        font-size: 15px;
+        padding: 6px 23px;
+    }
+
+    .blue-banner .description {
+        Padding: 20px 50px;
+    }
+
+    .blue-banner .boxes .shadow {
+        visibility: hidden;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .blue-banner .boxes {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin: 30px 50px;
+    }
+
+    .blue-banner .box {
+        width: 80%;
+        visibility: visible;
+    }
+}
+
+@media (max-width:600px) {
+
+    .section2 {
+        padding: 0px 10px;
+    }
+
+    .blue-banner .description {
+        Padding: 20px 100px;
+        font-size: 12px;
+    }
+
+    .blue-banner .title {
+        font-size: 25px;
+        margin-top: 30px;
+    }
+
+    .blue-banner .box .img img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .blue-banner .box {
+        margin-top: -10px;
+    }
+
+    .blue-banner .box .text h3 {
+        font-size: 10px;
+    }
+
+    .blue-banner .box .text h1 {
+        font-size: 16px;
+        margin-top: -15px;
+    }
+
+    .blue-banner .box .text p {
+        font-size: 9px;
+        line-height: 10px;
+        margin-top: -25px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .section1 .text h1 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .section1 .text h1 span {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .section1 .text p {
+        font-size: 10px;
+        padding: 10px 20px;
+        line-height: 13px;
+    }
+
+    .section1 .text .btn {
+        font-size: 12px;
+        padding: 4px 17px;
+    }
+
+    .section2 .button .btn {
+        padding: 9px 15px;
+        font-size: 10px;
+    }
+
+    .section2 .buttons .button img {
+        margin-right: 7px;
+        height: 13px;
+        width: 13px;
+    }
+
+    .section2 .button:nth-child(2) img {
+        width: 20px;
+    }
+
+    .section2__left,
+    .section2__right {
+        padding: 20px 10px;
+    }
+
+    .section2__explain h2 {
+        font-size: 18px;
+    }
+
+    .section2__left p {
+        font-size: 11px;
+    }
+
+    .section2__left h3 {
+        font-size: 12px;
+    }
+
+    .section2__code-section {
+        padding: 20px 5px;
+        font-size: 15px;
+    }
+
+    .section2__right h1 {
+        font-size: 18px;
+    }
+
+    .section2__right h1 i {
+        height: 20px;
+        width: 20px;
+        font-size: 12px;
+    }
+
+    .section2__right .ptext {
+        font-size: 10px;
+    }
+
+    .section2 .section2__info-section div {
+        font-size: 11px;
+        line-height: 14px;
+    }
+
+    .section2__info-section i {
+        min-height: 20px;
+        min-width: 20px;
+        max-height: 20px;
+        max-width: 20px;
+        font-size: 10px;
+        margin-right: 10px;
+    }
+
+    .section2__left .section2__btn,
+    .section2__right .section2__btn {
+        padding: 9px 18px;
+    }
+
+    .section2__left .section2__btn a,
+    .section2__right .section2__btn a {
+        font-size: 13px;
+    }
+
+    .section2 .signupbutton .button img {
+        height: 18px;
+        width: 18px;
+    }
+
+    .section2 .signupbutton .button .btn {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+
+    .blue-banner .boxes {
+        gap: 30px;
+        margin: 30px 20px;
+    }
+}
+
+
+@media (max-width:450px) {
+    .header {
+        padding: 10px 10px;
+    }
+
+    .header .permanent .logo img {
+        height: 20px;
+        width: 20px;
+        margin-right: 10px;
+    }
+
+    .header .permanent .logo a {
+        font-size: 16px;
+    }
+
+    .header .permanent .nav .signup {
+        padding: 5px 10px;
+    }
+
+    .header .permanent .nav .signup a {
+        font-size: 10px;
+        margin-left: 0px;
+    }
+
+    .header .permanent .nav .signup img {
+        height: 10px;
+        width: 10px;
+        margin-right: 5px;
+    }
+
+    .section1 {
+        padding: 20px 10px;
+    }
+
+    .section1 .text {
+        padding: 0px;
+    }
+
+    .section1 .text h1 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .section1 .text h1 span {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .section1 .text p {
+        font-size: 8px;
+        padding: 10px 20px;
+        line-height: 13px;
+    }
+
+    .section1 .text .btn {
+        font-size: 12px;
+        padding: 0px 17px;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+
+    .blue-banner .description {
+        Padding: 20px 40px;
+    }
+}
+
+@media(max-width:400px) {
+    .blue-banner .description {
+        Padding: 20px 40px;
+        font-size: 10px;
+    }
+
+    .blue-banner .title {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+}
+
+@media(max-width:350px) {
+    .blue-banner .box {
+        min-width: 95%;
+    }
+}
